@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gushwork | Professional Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="scroll-progress"></div>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="#" class="logo">GUSHWORK</a>
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                </ul>
+                <div class="header-actions">
+                    <button id="theme-btn">🌙</button>
+                    <button class="btn-primary" id="btnAuth">Get Started</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Leading with</h1>
+                <div class="typewriter-container">
+                    <span id="type-text"></span>
+                </div>
+                <p>Innovative solutions for modern businesses. Experience the future of web interfaces.</p>
+            </div>
+        </section>
+
+        <section class="gallery-section" id="gallery">
+            <h2 class="section-title">Visual Showcase</h2>
+            <div class="carousel-outer">
+                <button class="carousel-btn prev-btn" id="goPrev">❮</button>
+
+                <div class="carousel-viewport">
+                    <div class="carousel-track" id="track">
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80"
+                                alt="Work 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
+                                alt="Work 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80"
+                                alt="Work 3">
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-btn next-btn" id="goNext">❯</button>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal-overlay" id="authModal">
+        <div class="auth-card">
+            <div id="login-box">
+                <h2>Welcome Back</h2>
+                <input type="email" id="loginEmail" placeholder="Email ID">
+                <input type="password" id="loginPass" placeholder="Password">
+                <button class="btn-submit" id="doLogin">Login</button>
+                <p class="switch-text">New here? <span id="toRegister">Create Account</span></p>
+            </div>
+
+            <div id="register-box" style="display: none;">
+                <h2>Create Account</h2>
+                <input type="email" id="regEmail" placeholder="Email ID">
+                <input type="password" id="regPass" placeholder="Set Password">
+                <button class="btn-submit" id="doRegister">Sign Up</button>
+                <p class="switch-text">Already have an account? <span id="toLogin">Login here</span></p>
+            </div>
+            <button class="btn-close" id="closeModal">✕</button>
+        </div>
+    </div>
+
+    <div id="toast" class="toast-popup"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
